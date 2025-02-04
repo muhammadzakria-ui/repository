@@ -1,0 +1,248 @@
+   /* Universal Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Top nav bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14213d; /* Same color as footer */
+    padding: 10px 30px;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+}
+
+.nav .logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav .logo:hover {
+    color: #ff3369;
+    transform: scale(1.1);
+}
+
+.nav .menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.nav .menu a:hover {
+    color: #ff3369;
+}
+
+.nav .get-started button {
+    padding: 10px;
+    background-color: rgb(5, 5, 49);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav .get-started button:hover {
+    background-color: #ff3369;
+}
+
+/* Sidebar */
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #14213d;
+    padding: 20px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.side-bar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.side-bar ul li {
+    padding: 15px 0;
+}
+
+.side-bar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar ul li a i {
+    margin-right: 10px;
+}
+
+.side-bar ul li a:hover {
+    color: #ff3369;
+}
+
+/* Main section */
+main {
+    margin-left: 202px; /* Ensures content doesn't go behind sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f4f4f4; /* Light background for main content */
+    padding-bottom: 100px; /* Make space for the footer */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('simpleimg.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  Dark overlay to make text more visible 
+} */
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* White for the main heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for better visibility */
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #f4f4f4; /* Light gray color for contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle shadow for better visibility */
+}
+
+.hero button {
+    padding: 15px 30px;
+    background-color: #ff3369; /* Soft pink accent color */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #f44872; /* Slightly lighter shade on hover */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+}
+
+.feature i {
+    font-size: 50px;
+    color: #ff3369;
+}
+
+.feature h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Footer */
+.ft {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #14213d; /* Matching color with navbar */
+    padding: 20px;
+    width: 100%;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+    z-index: 11;
+}
+
+.ft ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft ul li {
+    color: #494A50;
+}
+
+.ft h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.ft ul li:hover {
+    color: #ff3369;
+}
+
+.ft h3:hover {
+    color: aquamarine;
+}
